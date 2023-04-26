@@ -86,7 +86,11 @@ struct ListNode* addNode (struct ListNode* l1,struct ListNode* l2){
 	struct ListNode* temp3=l3;
 	int sum=0;
 	while((temp!=NULL||temp2!=NULL)||sum>0){
-		struct ListNode* node=createNode1();
+		//struct ListNode* node=createNode1();
+		struct ListNode* node=(struct ListNode*)malloc(sizeof(struct ListNode));
+		node->next=NULL;
+     		node->val=0;
+
 	        if(l3==NULL){
 			l3=node;
 			temp3=l3;
